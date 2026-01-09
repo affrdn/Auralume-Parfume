@@ -11,9 +11,9 @@ export default function About() {
 
           <div className="text-base md:text-lg text-gray-700 space-y-6 text-justify">
             <p>
-              Didirikan pada 2020, AURUM lahir dari keyakinan bahwa setiap orang
-              layak memiliki wewangian yang unik — bukan sekadar aroma, tapi
-              cerminan kepribadian dan kenangan.
+              Didirikan pada 2025, Auralumè lahir dari keyakinan bahwa setiap
+              orang layak memiliki wewangian yang unik — bukan sekadar aroma,
+              tapi cerminan kepribadian dan kenangan.
             </p>
             <p>
               Kami bekerja sama dengan perfumer berpengalaman dari Prancis dan
