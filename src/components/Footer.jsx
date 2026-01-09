@@ -9,7 +9,9 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-serif font-bold text-gold">AURALUM</h3>
+            <h3 className="text-2xl font-serif font-bold text-gold">
+              Auralumè
+            </h3>
             <p className="mt-2 text-sm opacity-80">
               Parfum Premium • Made in Indonesia
             </p>
@@ -37,7 +39,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm opacity-70">
-          &copy; {new Date().getFullYear()} AURALUM Parfum. All rights reserved.
+          &copy; {new Date().getFullYear()} Auralumè Parfum. All rights
+          reserved.
         </div>
       </div>
     </footer>

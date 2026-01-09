@@ -4,7 +4,7 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center md:text-left">
           <h2 className="text-2xl md:text-4xl font-serif font-bold text-charcoal mb-4 text-center">
-            Tentang AURALUM
+            Tentang Auralumè
           </h2>
 
           <div className="w-20 h-[2px] bg-gold mx-auto mb-8 rounded-full" />

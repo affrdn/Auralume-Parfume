@@ -10,7 +10,7 @@ export default function Header() {
           href="/"
           className="text-xl font-serif tracking-wider font-semibold text-charcoal"
         >
-          AURALUM
+          Auralumè
         </a>
 
         {/* Desktop Nav */}
