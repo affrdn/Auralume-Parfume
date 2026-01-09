@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col ">
       <Header
         onHomeClick={() => scrollTo(homeRef)}
         onProductsClick={() => scrollTo(productsRef)}
@@ -29,7 +29,7 @@ function App() {
         onContactClick={() => scrollTo(contactRef)}
       />
 
-      <main className="flex-grow">
+      <main className="flex-grow space-y-1.5">
         <section ref={homeRef}>
           <Hero />
         </section>
