@@ -63,7 +63,7 @@ export default function ProductSection() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 space-y-10 md:space-y-0">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 gap-y-6">
           {products.map((product) => (
             <div key={product.id} className="text-center group">
               {/* Image */}

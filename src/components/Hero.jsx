@@ -6,7 +6,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="py-20 bg-stone">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 items-center space-y-6">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 items-center space-y-6">
         {/* Text */}
         <div>
           <div className="px-1 md:px-12">
@@ -24,7 +24,7 @@ export default function Hero() {
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gold text-white font-semibold px-4 py-1.5 md:px-8 md:py-4 rounded-full hover:bg-opacity-90 transition shadow-lg"
+              className="lg:inline-block bg-gold flex justify-self-center text-white font-semibold px-4 py-1.5 md:px-8 md:py-4 rounded-full hover:bg-opacity-90 transition shadow-lg"
             >
               Pesan Sekarang
             </a>

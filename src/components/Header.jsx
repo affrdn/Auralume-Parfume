@@ -1,70 +1,119 @@
 import { useState } from "react";
 
-export default function Header() {
+export default function Header({
+  onHomeClick,
+  onProductsClick,
+  onAboutClick,
+  onContactClick,
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto md:px-24 px-4 py-2 flex justify-between items-center">
-        <a
-          href="/"
+      <div className="container mx-auto md:px-24 px-6 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <button
+          onClick={onHomeClick}
           className="text-xl font-serif tracking-wider font-semibold text-charcoal"
         >
           Auralumè
-        </a>
+        </button>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-10">
           {["Home", "Produk", "Tentang", "Kontak"].map((item) => (
-            <a
+            <button
               key={item}
-              href={`#${item.toLowerCase()}`}
-              className="font-medium text-sm hover:text-gold transition"
+              onClick={
+                item === "Home"
+                  ? onHomeClick
+                  : item === "Produk"
+                  ? onProductsClick
+                  : item === "Tentang"
+                  ? onAboutClick
+                  : onContactClick
+              }
+              className="nav-item"
             >
               {item}
-            </a>
+            </button>
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
         <button
-          className="md:hidden text-charcoal"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-2xl text-charcoal"
+          onClick={() => setIsMenuOpen(true)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          ☰
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4 ">
-            {["Home", "Produk", "Tentang", "Kontak"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="font-medium hover:text-gold transition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-        </div>
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        />
       )}
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[60%] max-w-sm bg-white z-50 md:hidden
+        transform transition-transform duration-300 ease-out
+        ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="h-full w-full flex flex-col items-center  py-6">
+          {/* Brand */}
+          <div className="w-full text-center pb-6 mb-2 border-b border-stone-200">
+            <h2 className="text-2xl font-serif tracking-widest font-semibold text-charcoal">
+              Auralumè
+            </h2>
+          </div>
+
+          {/* Menu */}
+          <nav className="w-full flex flex-col divide-y divide-stone-200">
+            <MobileItem
+              label="Home"
+              onClick={onHomeClick}
+              close={() => setIsMenuOpen(false)}
+            />
+            <MobileItem
+              label="Produk"
+              onClick={onProductsClick}
+              close={() => setIsMenuOpen(false)}
+            />
+            <MobileItem
+              label="Tentang"
+              onClick={onAboutClick}
+              close={() => setIsMenuOpen(false)}
+            />
+            <MobileItem
+              label="Kontak"
+              onClick={onContactClick}
+              close={() => setIsMenuOpen(false)}
+            />
+          </nav>
+        </div>
+      </div>
     </header>
+  );
+}
+
+/* ======================
+   MOBILE ITEM
+   ====================== */
+function MobileItem({ label, onClick, close }) {
+  return (
+    <button
+      onClick={() => {
+        onClick();
+        close();
+      }}
+      className="p-4 text-lg font-medium text-start
+      hover:text-gold transition"
+    >
+      {label}
+    </button>
   );
 }
