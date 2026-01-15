@@ -2,7 +2,7 @@ import HeroImage from "../assets/images/Auralume-All-Product.jpg";
 
 export default function Hero() {
   const waUrl =
-    "https://wa.me/6281234567890?text=Halo%20AURUM,%20saya%20tertarik%20dengan%20parfum%20Anda.";
+    "https://wa.me/6281386000520?text=Halo%20AURUM,%20saya%20tertarik%20dengan%20parfum%20Anda.";
 
   return (
     <section id="home" className="py-20 bg-stone">

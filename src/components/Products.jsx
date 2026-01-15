@@ -12,6 +12,7 @@ const products = [
     notes: "Rose · Amber · Vanilla",
     image: BlueIce,
     price: "Rp 75.000",
+    buyLink: "https://vt.tokopedia.com/t/ZSHorNBYC6g6X-wpbSx/",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const products = [
     notes: "Black Pepper · Cedar · Musk",
     image: Classy,
     price: "Rp 75.000",
+    buyLink: "https://vt.tokopedia.com/t/ZSHorNBYC6g6X-wpbSx/",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const products = [
     notes: "Lemon · Sea Salt · Driftwood",
     image: Ocean,
     price: "Rp 75.000",
+    buyLink: "https://vt.tokopedia.com/t/ZSHorNAyCwyc5-Tcevr/",
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ const products = [
     notes: "Iris · Oud · Tonka Bean",
     image: Lumine,
     price: "Rp 75.000",
+    buyLink: "https://vt.tokopedia.com/t/ZSHorNUhGXtvQ-XyJUC/",
   },
   {
     id: 5,
@@ -44,6 +48,7 @@ const products = [
     notes: "White Musk · Aldehyde · Linen",
     image: Ursa,
     price: "Rp 75.000",
+    buyLink: "https://vt.tokopedia.com/t/ZSHorNht4r8Aw-6Uq0E/",
   },
 ];
 
